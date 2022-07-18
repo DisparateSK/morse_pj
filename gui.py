@@ -61,7 +61,8 @@ class App:
 
     def translate_word(self):
         user_word = self.input_word.get()
+        mod_user_word = user_word.replace(' ','').replace('-','')
         new_word = ''
-        for capital in user_word:
+        for capital in mod_user_word:
             new_word += data.morse[capital.capitalize()] + ' '
         self.morse_word["text"] = new_word
