@@ -26,7 +26,7 @@ class App:
         GButton_13["font"] = ft
         GButton_13["fg"] = "#ffffff"
         GButton_13["justify"] = "center"
-        GButton_13["text"] = "Let's translate"
+        GButton_13["txt"] = "Let's translate"
         GButton_13["relief"] = "raised"
         GButton_13.place(x=190, y=230, width=214, height=78)
         GButton_13["command"] = self.translate_word
@@ -38,7 +38,7 @@ class App:
         self.input_word["font"] = ft
         self.input_word["fg"] = "#333333"
         self.input_word["justify"] = "center"
-        self.input_word["text"] = "Your word"
+        self.input_word["txt"] = "Your word"
         self.input_word.place(x=190, y=140, width=212, height=79)
 
         GMessage_483 = tk.Message(root)
@@ -46,7 +46,7 @@ class App:
         GMessage_483["font"] = ft
         GMessage_483["fg"] = "#333333"
         GMessage_483["justify"] = "center"
-        GMessage_483["text"] = "Text to Morse Code Converter"
+        GMessage_483["txt"] = "Text to Morse Code Converter"
         GMessage_483.place(x=90, y=30, width=429, height=99)
 
         self.morse_word = tk.Message(root)
@@ -56,7 +56,7 @@ class App:
         self.morse_word["font"] = ft
         self.morse_word["fg"] = "#333333"
         self.morse_word["justify"] = "center"
-        self.morse_word["text"] = "Message"
+        self.morse_word["txt"] = "Message"
         self.morse_word.place(x=190, y=340, width=214, height=99)
 
     def translate_word(self):
@@ -65,4 +65,4 @@ class App:
         new_word = ''
         for capital in mod_user_word:
             new_word += data.morse[capital.capitalize()] + ' '
-        self.morse_word["text"] = new_word
+        self.morse_word["txt"] = new_word
